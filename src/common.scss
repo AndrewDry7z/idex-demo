@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+  background: #393a3f;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  @media screen and (max-width: 800px) {
+    background: #ffffff;
+  }
+}
+
+.main {
+  margin-left: 100px;
+  padding: 40px;
+  background: #ffffff;
+  width: calc(100% - 180px);
+  position: fixed;
+  height: 100%;
+
+  @media screen and (max-width: 800px) {
+    padding: 20px;
+    width: calc(100% - 40px);
+    margin-left: 0;
+    position: relative;
+  }
+
+  &__heading {
+    font-size: 32px;
+    color: #000000;
+    @media screen and (max-width: 480px) {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.wrap {
+  background: #F7F7F7;
+  overflow: auto;
+}

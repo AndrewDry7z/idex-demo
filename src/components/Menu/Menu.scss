@@ -1,0 +1,45 @@
+.menu {
+  background: #F7F7F7;
+
+  &-list {
+    display: flex;
+    padding-left: 20px;
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      padding-left: 0;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    margin-right: 20px;
+
+    @media screen and (max-width: 480px) {
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+  &__button {
+    font-size: 14px;
+
+    text-align: center;
+    background: #556080;
+    color: #CACACA;
+    padding: 15px 40px;
+    border: none;
+    margin: 10px 0;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+
+    &.active {
+      background: #ffffff;
+      color: #556080;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.table {
+  background: white;
+  min-width: 1000px;
+  overflow-x: auto;
+
+  @media screen and (max-width: 800px) {
+    overflow-x: scroll;
+  }
+
+  &-line {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    align-items: center;
+
+
+    &:first-child {
+      font-size: 13px;
+      background: #F7F7F7;
+
+      .table-line__item {
+        &:first-child {
+          text-align: left;
+        }
+      }
+    }
+
+    &__item {
+      width: 75px;
+      text-align: center;
+
+      &:first-child {
+        width: 170px;
+      }
+    }
+  }
+}
+
+.worker {
+  display: flex;
+  text-align: left;
+  align-items: center;
+
+  &-name {
+    font-size: 14px;
+  }
+
+  &-photo {
+    width: 32px;
+    max-width: 32px;
+    margin-right: 10px;
+    display: flex;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.month-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .week {
+    display: flex;
+    flex-direction: column;
+    max-height: 3*7px;
+
+    &:first-child {
+      justify-content: flex-end;
+    }
+
+    .day {
+      width: 10px;
+      height: 3px;
+      background: #EAF9FF;
+      margin: 0 1px;
+    }
+
+    .vacation-day {
+      background: #1EBEB4;
+      cursor: pointer;
+    }
+
+    .sickness-day {
+      background: #F16953;
+      cursor: pointer;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 30px;
+  left: calc(50% - 145px);
+  background: #fff;
+  width: 250px;
+  padding: 0 20px 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgba(107, 107, 107, 0.50);
+
+  .worker {
+    margin: 10px;
+
+    &-name {
+      font-weight: 600;
+    }
+
+    &-photo {
+      width: 54px;
+      max-width: 54px;
+    }
+  }
+
+  .vacation-info {
+    font-size: 14px;
+
+    &__dates {
+      color: #000000;
+      margin: 2px 0;
+    }
+
+    &__type {
+      color: #AEAEAE;
+      margin: 2px 0;
+    }
+
+    &__typeblock {
+      width: 12px;
+      height: 16px;
+      margin-right: 5px;
+      margin-bottom: -3px;
+      display: inline-block;
+    }
+  }
+}

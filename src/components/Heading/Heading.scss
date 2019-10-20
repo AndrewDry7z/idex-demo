@@ -1,0 +1,56 @@
+.heading {
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: #f7f7f7;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__text {
+    h2 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    @media screen and (min-width: 600px) {
+      margin-left: 20px;
+    }
+
+  }
+
+  &__year {
+    @media screen and (min-width: 600px) {
+      margin-right: 20px;
+    }
+
+    #year-input {
+      text-align: center;
+      background: none;
+      border: none;
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+
+      &::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    @each $arrow in ('increase', 'decrease') {
+      &--#{$arrow} {
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
